@@ -38,7 +38,7 @@ const config: Config = {
         '2xl': 'var(--radius-2xl)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         mono: ['SF Mono', 'Monaco', 'monospace'],
       },
     },

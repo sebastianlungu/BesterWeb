@@ -1,7 +1,14 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './_components/Navbar';
 import Footer from './_components/Footer';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   // TODO: Update metadataBase when deploying to production (e.g., 'https://bester.com')
@@ -29,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" className={inter.variable}>
+      <body className="antialiased font-sans">
         <Navbar />
         <main>{children}</main>
         <Footer />

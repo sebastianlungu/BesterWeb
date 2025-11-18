@@ -1,6 +1,10 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Checkbox } from '@/components/ui/checkbox';
 
 export default function WaitlistForm() {
   const [email, setEmail] = useState('');
@@ -38,58 +42,61 @@ export default function WaitlistForm() {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-6">
         {/* Email Input */}
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
+        <div className="space-y-2">
+          <Label htmlFor="email" className="text-base font-semibold">
             Email Address
-          </label>
-          <input
+          </Label>
+          <Input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="you@example.com"
-            className="w-full px-4 py-3 border border-[var(--color-border-default)] rounded-[var(--radius-md)] focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all"
+            className="h-12 text-base rounded-xl border-2 focus-visible:ring-[var(--color-brand-primary)] focus-visible:border-[var(--color-brand-primary)]"
           />
         </div>
 
         {/* Early Access Checkbox */}
         <div className="flex items-start gap-3">
-          <input
-            type="checkbox"
+          <Checkbox
             id="earlyAccess"
             checked={interestedInEarlyAccess}
-            onChange={(e) => setInterestedInEarlyAccess(e.target.checked)}
-            className="mt-1 w-4 h-4 text-[var(--color-brand-primary)] border-[var(--color-border-default)] rounded focus:ring-[var(--color-brand-primary)]"
+            onCheckedChange={(checked) => setInterestedInEarlyAccess(checked === true)}
+            className="mt-1"
           />
-          <label htmlFor="earlyAccess" className="text-sm text-[var(--color-text-secondary)]">
+          <Label
+            htmlFor="earlyAccess"
+            className="text-sm text-[var(--color-text-secondary)] font-normal cursor-pointer"
+          >
             I'm interested in Early Access (limited spots available)
-          </label>
+          </Label>
         </div>
 
         {/* Submit Button */}
-        <button
+        <Button
           type="submit"
           disabled={loading}
-          className="w-full px-6 py-3 bg-[var(--color-brand-primary)] text-white rounded-[var(--radius-md)] font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+          size="lg"
+          className="w-full h-12 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all bg-[var(--color-brand-primary)] hover:bg-[var(--color-brand-primary)]/90"
         >
           {loading ? 'Joining...' : 'Join the Waitlist'}
-        </button>
+        </Button>
 
         {/* Helper Text */}
-        <p className="text-xs text-center text-[var(--color-text-tertiary)]">
-          Get 3 months Premium at launch
+        <p className="text-sm text-center text-[var(--color-text-tertiary)] font-medium">
+          ✨ Get 3 months Premium at launch
         </p>
 
         {/* Success/Error Message */}
         {message && (
           <div
-            className={`p-4 rounded-[var(--radius-md)] text-sm ${
+            className={`p-4 rounded-xl text-sm font-medium ${
               message.type === 'success'
-                ? 'bg-[var(--color-semantic-success)]/10 text-[var(--color-semantic-success)] border border-[var(--color-semantic-success)]/20'
-                : 'bg-[var(--color-semantic-danger)]/10 text-[var(--color-semantic-danger)] border border-[var(--color-semantic-danger)]/20'
+                ? 'bg-[var(--color-semantic-success)]/10 text-[var(--color-semantic-success)] border-2 border-[var(--color-semantic-success)]/20'
+                : 'bg-[var(--color-semantic-danger)]/10 text-[var(--color-semantic-danger)] border-2 border-[var(--color-semantic-danger)]/20'
             }`}
           >
             {message.text}

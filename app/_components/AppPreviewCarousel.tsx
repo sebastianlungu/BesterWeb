@@ -3,32 +3,37 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const realms = [
+export const realms = [
   {
+    id: 'social-feed',
     name: 'Social Feed',
     description: 'See what your community is working on',
     color: 'var(--color-brand-primary)',
     emoji: '🌟',
   },
   {
+    id: 'ai-routine',
     name: 'Smart AI Routine Engine',
     description: 'Personalized routines that adapt to you',
     color: 'var(--color-realm-system-sanctum)',
     emoji: '🤖',
   },
   {
+    id: 'quests-realms',
     name: 'Quests & Realms',
     description: 'Explore different growth universes',
     color: 'var(--color-realm-creative-flow)',
     emoji: '🎯',
   },
   {
+    id: 'mind-forge',
     name: 'Mind Forge',
     description: 'Mental clarity, focus, learning',
     color: 'var(--color-realm-mind-forge)',
     emoji: '🧠',
   },
   {
+    id: 'vital-body',
     name: 'Vital Body',
     description: 'Physical health, fitness, movement',
     color: 'var(--color-realm-vital-body)',
@@ -36,7 +41,11 @@ const realms = [
   },
 ];
 
-export default function AppPreviewCarousel() {
+interface AppPreviewCarouselProps {
+  onRealmChange?: (realmId: string) => void;
+}
+
+export default function AppPreviewCarousel({ onRealmChange }: AppPreviewCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -46,6 +55,13 @@ export default function AppPreviewCarousel() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    // Notify parent component when realm changes
+    if (onRealmChange) {
+      onRealmChange(realms[currentIndex].id);
+    }
+  }, [currentIndex, onRealmChange]);
 
   return (
     <div className="relative w-full max-w-2xl mx-auto">
