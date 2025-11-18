@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors */
+  --color-brand-primary: #2F00FF;
+  --color-brand-secondary: #8B5CF6;
+  --color-brand-accent: #F51AA4;
+  --color-brand-surface: #F8F8FF;
+  --color-brand-base: #1B1B1E;
+
+  /* Semantic Colors */
+  --color-semantic-success: #0CCE6B;
+  --color-semantic-warning: #FFC400;
+  --color-semantic-danger: #FF4D4F;
+  --color-semantic-info: #2F00FF;
+
+  /* Realm Colors */
+  --color-realm-mind-forge: #8B5CF6;
+  --color-realm-vital-body: #10B981;
+  --color-realm-creative-flow: #F59E0B;
+  --color-realm-heart-lab: #EC4899;
+  --color-realm-system-sanctum: #3B82F6;
+  --color-realm-playground-earth: #F97316;
+  --color-realm-inner-cosmos: #6366F1;
+
+  /* Text Colors */
+  --color-text-primary: #1B1B1E;
+  --color-text-secondary: #6B7280;
+  --color-text-tertiary: #9CA3AF;
+  --color-text-inverse: #FFFFFF;
+
+  /* Background Colors */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F9FAFB;
+  --color-bg-tertiary: #D3D4D9;
+  --color-bg-inverse: #1B1B1E;
+
+  /* Border Colors */
+  --color-border-default: #E5E7EB;
+  --color-border-strong: #D1D5DB;
+  --color-border-subtle: #F3F4F6;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Border Radius */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 40px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 2px 4px 0 rgb(0 0 0 / 0.08);
+  --shadow-md: 0 4px 8px 0 rgb(0 0 0 / 0.12);
+  --shadow-lg: 0 8px 16px 0 rgb(0 0 0 / 0.16);
+  --shadow-xl: 0 12px 24px 0 rgb(0 0 0 / 0.20);
+
+  /* Motion */
+  --duration-micro: 120ms;
+  --duration-short: 200ms;
+  --duration-standard: 300ms;
+  --duration-slow: 500ms;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
