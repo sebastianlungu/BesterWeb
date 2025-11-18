@@ -28,7 +28,7 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <Section variant="secondary" id="features">
+    <Section variant="mint-strong" id="features">
       <Container>
         <div className="text-center mb-16 px-4 space-y-6">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">

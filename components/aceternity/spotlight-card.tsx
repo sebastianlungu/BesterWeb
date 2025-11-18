@@ -37,7 +37,7 @@ export const SpotlightCard = ({
       ref={ref}
       onMouseMove={handleMouseMove}
       className={cn(
-        "relative overflow-hidden rounded-2xl p-8 bg-gradient-to-br from-[var(--color-brand-primary)]/5 to-[var(--color-brand-accent)]/5",
+        "relative overflow-hidden rounded-2xl p-8 bg-gradient-to-br from-[var(--color-primary-600)]/5 to-[var(--color-secondary-400)]/5",
         className
       )}
     >
@@ -48,7 +48,7 @@ export const SpotlightCard = ({
           WebkitMaskImage: maskImage,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brand-primary)]/20 to-[var(--color-brand-accent)]/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-600)]/20 to-[var(--color-secondary-400)]/20" />
       </motion.div>
       <div className="relative z-10">{children}</div>
     </div>

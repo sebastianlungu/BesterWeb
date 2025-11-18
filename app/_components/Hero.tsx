@@ -16,7 +16,7 @@ export default function Hero() {
   const [currentRealm, setCurrentRealm] = useState('social-feed');
 
   return (
-    <Section variant="default" padding="large" className="relative min-h-screen overflow-hidden pt-24">
+    <Section variant="cream-strong" padding="large" className="relative min-h-screen overflow-hidden pt-24">
       <Container size="wide">
         <AnimatedSpotlight fill="var(--color-brand-primary)" />
 
@@ -85,8 +85,8 @@ export default function Hero() {
                     </a>
                   </Button>
                 </div>
-                <p className="text-base text-[var(--color-text-secondary)] font-medium">
-                  ✨ Get 3 months Premium free at launch
+                <p className="text-base font-medium">
+                  <span className="text-[var(--color-accent-600)]">✨ Get 3 months Premium free</span> <span className="text-[var(--color-text-secondary)]">at launch</span>
                 </p>
               </motion.div>
             </div>

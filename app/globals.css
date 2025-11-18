@@ -3,68 +3,192 @@
 @tailwind utilities;
 
 :root {
-  /* shadcn/ui CSS Variables */
-  --background: 0 0% 100%;
-  --foreground: 222 47% 11%;
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  --primary: 249 100% 50%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222 47% 11%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
-  --accent: 330 95% 56%;
-  --accent-foreground: 0 0% 100%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 249 100% 50%;
-  --radius: 0.5rem;
+  /* ========================================
+     shadcn/ui CSS Variables (HSL format)
+     ======================================== */
+  --background: 50 60% 93%;        /* Cream (#FBF7E1) */
+  --foreground: 222 7% 11%;        /* Eerie Black (#1B1B1E) */
+  --card: 50 60% 93%;              /* Cream (#FBF7E1) */
+  --card-foreground: 222 7% 11%;   /* Eerie Black (#1B1B1E) */
+  --popover: 50 60% 93%;           /* Cream (#FBF7E1) */
+  --popover-foreground: 222 7% 11%; /* Eerie Black (#1B1B1E) */
+  --primary: 160 63% 21%;          /* Forest (#13583C) */
+  --primary-foreground: 0 0% 100%; /* White */
+  --secondary: 150 35% 78%;        /* Mint Frost (#B1DDC6) */
+  --secondary-foreground: 222 7% 11%; /* Eerie Black */
+  --muted: 50 50% 90%;             /* Lighter Cream */
+  --muted-foreground: 150 10% 39%; /* Sage-gray (#5A6B61) */
+  --accent: 11 85% 80%;            /* Blush (#F8AE9E) */
+  --accent-foreground: 222 7% 11%; /* Eerie Black */
+  --destructive: 359 99% 27%;      /* Burgundy (#890103) */
+  --destructive-foreground: 0 0% 100%; /* White */
+  --border: 50 55% 78%;            /* surface.400 (#F1E79F) */
+  --input: 50 55% 78%;             /* surface.400 (#F1E79F) */
+  --ring: 160 63% 21%;             /* Forest (#13583C) */
+  --radius: 0.75rem;               /* 12px */
 
-  /* Brand Colors */
-  --color-brand-primary: #2F00FF;
-  --color-brand-secondary: #8B5CF6;
-  --color-brand-accent: #F51AA4;
-  --color-brand-surface: #F8F8FF;
-  --color-brand-base: #1B1B1E;
+  /* ========================================
+     Brand Colors
+     ======================================== */
+  --color-brand-primary: #13583C;    /* Forest */
+  --color-brand-secondary: #B1DDC6;  /* Mint Frost */
+  --color-brand-accent: #F8AE9E;     /* Blush */
+  --color-brand-surface: #FBF7E1;    /* Cream */
+  --color-brand-base: #1B1B1E;       /* Eerie Black */
 
-  /* Semantic Colors */
-  --color-semantic-success: #0CCE6B;
-  --color-semantic-warning: #FFC400;
-  --color-semantic-danger: #FF4D4F;
-  --color-semantic-info: #2F00FF;
+  /* ========================================
+     Color Scales - Primary (Forest)
+     ======================================== */
+  --color-primary-50: #E8F2ED;
+  --color-primary-100: #D1E5DB;
+  --color-primary-200: #A3CBB7;
+  --color-primary-300: #75B193;
+  --color-primary-400: #47976F;
+  --color-primary-500: #2C7A56;
+  --color-primary-600: #236246;
+  --color-primary-700: #13583C;
+  --color-primary-800: #0E4028;
+  --color-primary-900: #072814;
 
-  /* Realm Colors */
-  --color-realm-mind-forge: #8B5CF6;
-  --color-realm-vital-body: #10B981;
-  --color-realm-creative-flow: #F59E0B;
-  --color-realm-heart-lab: #EC4899;
-  --color-realm-system-sanctum: #3B82F6;
-  --color-realm-playground-earth: #F97316;
-  --color-realm-inner-cosmos: #6366F1;
+  /* ========================================
+     Color Scales - Secondary (Mint Frost)
+     ======================================== */
+  --color-secondary-50: #F0F9F4;
+  --color-secondary-100: #E1F3E9;
+  --color-secondary-200: #C8E8D7;
+  --color-secondary-300: #B1DDC6;
+  --color-secondary-400: #8BCFAE;
+  --color-secondary-500: #65C196;
+  --color-secondary-600: #4DAA7E;
+  --color-secondary-700: #3D8865;
+  --color-secondary-800: #2E664C;
+  --color-secondary-900: #1F4433;
 
-  /* Text Colors */
-  --color-text-primary: #1B1B1E;
-  --color-text-secondary: #6B7280;
-  --color-text-tertiary: #9CA3AF;
-  --color-text-inverse: #FFFFFF;
+  /* ========================================
+     Color Scales - Accent (Blush)
+     ======================================== */
+  --color-accent-50: #FEF6F4;
+  --color-accent-100: #FDEDE9;
+  --color-accent-200: #FCD9D1;
+  --color-accent-300: #F8AE9E;
+  --color-accent-400: #F6987E;
+  --color-accent-500: #F4825E;
+  --color-accent-600: #F26C3E;
+  --color-accent-700: #D8531E;
+  --color-accent-800: #A13F17;
+  --color-accent-900: #6A2A0F;
 
-  /* Background Colors */
-  --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #F9FAFB;
-  --color-bg-tertiary: #D3D4D9;
-  --color-bg-inverse: #1B1B1E;
+  /* ========================================
+     Color Scales - Surface (Cream)
+     ======================================== */
+  --color-surface-50: #FEFDFB;
+  --color-surface-100: #FBF7E1;
+  --color-surface-200: #F9F3D1;
+  --color-surface-300: #F5EDB8;
+  --color-surface-400: #F1E79F;
+  --color-surface-500: #EDE186;
+  --color-surface-600: #E9DB6D;
+  --color-surface-700: #D9C84D;
+  --color-surface-800: #A69A3A;
+  --color-surface-900: #736C27;
 
-  /* Border Colors */
-  --color-border-default: #E5E7EB;
-  --color-border-strong: #D1D5DB;
-  --color-border-subtle: #F3F4F6;
+  /* ========================================
+     Color Scales - Success (Sage)
+     ======================================== */
+  --color-success-50: #EEF5F1;
+  --color-success-100: #DDEBE3;
+  --color-success-200: #BBD7C7;
+  --color-success-300: #99C3AB;
+  --color-success-400: #86B496;
+  --color-success-500: #73A681;
+  --color-success-600: #5C8567;
+  --color-success-700: #45644D;
+  --color-success-800: #2E4333;
+  --color-success-900: #17211A;
 
-  /* Spacing */
+  /* ========================================
+     Color Scales - Danger (Burgundy)
+     ======================================== */
+  --color-danger-50: #FCEAEA;
+  --color-danger-100: #F9D5D5;
+  --color-danger-200: #F3ABAB;
+  --color-danger-300: #ED8181;
+  --color-danger-400: #E75757;
+  --color-danger-500: #C92A2C;
+  --color-danger-600: #AB1214;
+  --color-danger-700: #890103;
+  --color-danger-800: #670102;
+  --color-danger-900: #450101;
+
+  /* ========================================
+     Semantic Colors
+     ======================================== */
+  --color-semantic-success: #73A681;  /* Sage */
+  --color-semantic-warning: #F8AE9E;  /* Blush */
+  --color-semantic-danger: #890103;   /* Burgundy */
+  --color-semantic-info: #13583C;     /* Forest */
+
+  /* ========================================
+     Realm Colors (bg + line per realm)
+     ======================================== */
+  --color-realm-mindForge-bg: #F6F3FF;    /* pale lavender */
+  --color-realm-mindForge-line: #5C4B99;  /* muted indigo */
+
+  --color-realm-vitalBody-bg: #F3FBF6;    /* very light health green */
+  --color-realm-vitalBody-line: #3C8C5B;  /* leaf green */
+
+  --color-realm-creativeFlow-bg: #FFF5F7; /* soft rosy tint */
+  --color-realm-creativeFlow-line: #E56A7A; /* coral-pink */
+
+  --color-realm-heartLab-bg: #FFF3F3;     /* gentle pinkish cream */
+  --color-realm-heartLab-line: #E24B5A;   /* warm red-pink */
+
+  --color-realm-systemSanctum-bg: #F2F7FB; /* pale blue/steel tint */
+  --color-realm-systemSanctum-line: #3C6E8C; /* muted steel blue */
+
+  --color-realm-playgroundEarth-bg: #FFF7ED; /* soft apricot */
+  --color-realm-playgroundEarth-line: #D97745; /* warm earthy orange */
+
+  --color-realm-innerCosmos-bg: #F3F6FF;  /* pale cosmic blue */
+  --color-realm-innerCosmos-line: #324D93; /* deep but not neon blue */
+
+  /* ========================================
+     Text Colors
+     ======================================== */
+  --color-text-primary: #1B1B1E;     /* Eerie Black */
+  --color-text-secondary: #5A6B61;   /* Sage-gray blend */
+  --color-text-tertiary: #D1E5DB;    /* primary.100 - disabled */
+  --color-text-inverse: #FFFFFF;     /* White */
+  --color-text-brand: #13583C;       /* Forest - use sparingly */
+
+  /* ========================================
+     Background Colors (Cream + Mint Alternation)
+     ======================================== */
+  --color-bg-cream-subtle: #FEFCF4;  /* Cream 50 - Lightest cream */
+  --color-bg-cream-strong: #FBF7E1;  /* Main cream */
+  --color-bg-mint-subtle: #F7FBF9;   /* Very light mint */
+  --color-bg-mint-strong: #E8F4ED;   /* Stronger mint */
+  --color-bg-inverse: #1B1B1E;       /* Eerie Black */
+
+  /* ========================================
+     Border Colors
+     ======================================== */
+  --color-border-default: #F1E79F;  /* surface.400 */
+  --color-border-strong: #EDE186;   /* surface.500 */
+  --color-border-subtle: #F9F3D1;   /* surface.200 */
+
+  /* ========================================
+     Gradients
+     ======================================== */
+  --gradient-brand-primary: linear-gradient(135deg, #236246 0%, #8BCFAE 100%);
+  --gradient-brand-secondary: linear-gradient(135deg, #B1DDC6 0%, #C8E8D7 100%);
+  --gradient-brand-accent: linear-gradient(135deg, #F4825E 0%, #FCD9D1 100%);
+  --gradient-hero: linear-gradient(180deg, #FBF7E1 0%, #F9F3D1 100%);
+  --gradient-surface: linear-gradient(180deg, #FEFDFB 0%, #FBF7E1 100%);
+
+  /* ========================================
+     Spacing
+     ======================================== */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -72,7 +196,9 @@
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
 
-  /* Border Radius */
+  /* ========================================
+     Border Radius
+     ======================================== */
   --radius-xs: 4px;
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -81,7 +207,9 @@
   --radius-2xl: 24px;
   --radius-full: 9999px;
 
-  /* Typography */
+  /* ========================================
+     Typography
+     ======================================== */
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-base: 16px;
@@ -90,38 +218,79 @@
   --font-size-2xl: 24px;
   --font-size-3xl: 32px;
   --font-size-4xl: 40px;
+  --font-size-5xl: 48px;
+  --font-size-6xl: 56px;
 
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
 
   --line-height-tight: 1.2;
   --line-height-base: 1.5;
   --line-height-relaxed: 1.75;
 
-  /* Shadows */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /* ========================================
+     Shadows
+     ======================================== */
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-sm: 0 2px 4px 0 rgb(0 0 0 / 0.08);
   --shadow-md: 0 4px 8px 0 rgb(0 0 0 / 0.12);
   --shadow-lg: 0 8px 16px 0 rgb(0 0 0 / 0.16);
   --shadow-xl: 0 12px 24px 0 rgb(0 0 0 / 0.20);
 
-  /* Motion */
+  /* ========================================
+     Motion
+     ======================================== */
   --duration-micro: 120ms;
   --duration-short: 200ms;
   --duration-standard: 300ms;
   --duration-slow: 500ms;
 }
 
+/* ========================================
+   Base Styles
+   ======================================== */
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-inter), var(--font-satoshi), 'Inter', system-ui, sans-serif;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ========================================
+   Utility Classes
+   ======================================== */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .gradient-brand-primary {
+    background: var(--gradient-brand-primary);
+  }
+
+  .gradient-brand-secondary {
+    background: var(--gradient-brand-secondary);
+  }
+
+  .gradient-brand-accent {
+    background: var(--gradient-brand-accent);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-surface {
+    background: var(--gradient-surface);
   }
 }

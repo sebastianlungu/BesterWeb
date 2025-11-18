@@ -8,7 +8,7 @@ import WaitlistForm from './WaitlistForm';
 
 export default function FinalCTASection() {
   return (
-    <Section variant="gradient" id="waitlist">
+    <Section variant="mint-subtle" id="waitlist">
       <Container size="narrow">
         <SpotlightCard className="text-center shadow-sm hover:shadow-lg transition-all duration-300">
           <motion.div

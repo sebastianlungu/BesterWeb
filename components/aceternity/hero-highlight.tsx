@@ -35,7 +35,7 @@ export const Highlight = ({
       animate={{ backgroundSize: "100% 100%" }}
       transition={{ duration: 0.5, delay: 0.2 }}
       className={cn(
-        "relative inline-block bg-gradient-to-r from-[var(--color-brand-primary)] to-[var(--color-brand-accent)] bg-clip-text text-transparent",
+        "relative inline-block bg-gradient-to-r from-[var(--color-primary-600)] to-[var(--color-secondary-400)] bg-clip-text text-transparent",
         className
       )}
     >

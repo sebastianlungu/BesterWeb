@@ -7,7 +7,7 @@ import { Highlight } from '@/components/aceternity/hero-highlight';
 
 export default function ValuePropositionSection() {
   return (
-    <Section variant="default" padding="default">
+    <Section variant="cream-subtle" padding="default">
       <Container size="narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

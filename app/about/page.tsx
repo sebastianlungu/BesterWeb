@@ -22,7 +22,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen pt-24 pb-16">
       {/* Header */}
-      <Section variant="default" padding="default">
+      <Section variant="cream-strong" padding="default">
         <Container size="narrow">
           <motion.header
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Who We Are - Founders */}
-      <Section variant="secondary" padding="default">
+      <Section variant="mint-subtle" padding="default">
         <Container size="narrow">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Our Story */}
-      <Section variant="default" padding="default">
+      <Section variant="cream-strong" padding="default">
         <Container size="narrow">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Our Mission */}
-      <Section variant="secondary" padding="default">
+      <Section variant="mint-subtle" padding="default">
         <Container size="narrow">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Our Vision */}
-      <Section variant="default" padding="default">
+      <Section variant="cream-strong" padding="default">
         <Container size="narrow">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

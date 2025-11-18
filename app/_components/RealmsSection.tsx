@@ -3,21 +3,14 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
-import { AnimatedGrid } from "@/components/aceternity/animated-grid";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Brain,
-  Lightning,
   Activity,
-  Heartbeat,
   PaintBrush,
-  Palette,
   Heart,
-  HandHeart,
   Target,
-  Wrench,
   Compass,
-  GlobeHemisphereWest,
   Sparkle
 } from "phosphor-react";
 
@@ -26,49 +19,56 @@ export default function RealmsSection() {
     {
       name: 'Mind Forge',
       description: 'Mental clarity, focus, learning',
-      color: 'var(--color-realm-mind-forge)',
+      bgColor: 'var(--color-realm-mindForge-bg)',
+      lineColor: 'var(--color-realm-mindForge-line)',
       icon: Brain,
     },
     {
       name: 'Vital Body',
       description: 'Physical health, fitness, movement',
-      color: 'var(--color-realm-vital-body)',
+      bgColor: 'var(--color-realm-vitalBody-bg)',
+      lineColor: 'var(--color-realm-vitalBody-line)',
       icon: Activity,
     },
     {
       name: 'Creative Flow',
       description: 'Artistic expression, creativity',
-      color: 'var(--color-realm-creative-flow)',
+      bgColor: 'var(--color-realm-creativeFlow-bg)',
+      lineColor: 'var(--color-realm-creativeFlow-line)',
       icon: PaintBrush,
     },
     {
       name: 'Heart Lab',
       description: 'Connection, love, relationships',
-      color: 'var(--color-realm-heart-lab)',
+      bgColor: 'var(--color-realm-heartLab-bg)',
+      lineColor: 'var(--color-realm-heartLab-line)',
       icon: Heart,
     },
     {
       name: 'System Sanctum',
       description: 'Systems, processes, optimization',
-      color: 'var(--color-realm-system-sanctum)',
+      bgColor: 'var(--color-realm-systemSanctum-bg)',
+      lineColor: 'var(--color-realm-systemSanctum-line)',
       icon: Target,
     },
     {
       name: 'Playground Earth',
       description: 'Exploration, adventure',
-      color: 'var(--color-realm-playground-earth)',
+      bgColor: 'var(--color-realm-playgroundEarth-bg)',
+      lineColor: 'var(--color-realm-playgroundEarth-line)',
       icon: Compass,
     },
     {
       name: 'Inner Cosmos',
       description: 'Spirituality, purpose, legacy',
-      color: 'var(--color-realm-inner-cosmos)',
+      bgColor: 'var(--color-realm-innerCosmos-bg)',
+      lineColor: 'var(--color-realm-innerCosmos-line)',
       icon: Sparkle,
     },
   ];
 
   return (
-    <Section variant="default" id="realms">
+    <Section variant="cream-strong" id="realms">
       <Container>
         <div className="text-center mb-16 px-4 space-y-6">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
@@ -81,34 +81,36 @@ export default function RealmsSection() {
         </div>
 
         <div className="max-w-7xl mx-auto w-full px-4">
-          <div className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {/* Flexbox layout with centered rows */}
+          <div className="flex flex-wrap justify-center gap-6">
             {realms.map((realm, index) => {
               const IconComponent = realm.icon;
               return (
                 <motion.div
                   key={index}
-                  className="h-full min-h-[220px]"
+                  className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[280px] xl:w-[300px]"
                   whileHover={{ y: -6, scale: 1.02 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <Card
-                    className="h-full border-2 cursor-pointer rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+                    className="h-full min-h-[220px] border-2 cursor-pointer rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
                     style={{
-                      borderColor: realm.color,
-                      background: `linear-gradient(135deg, ${realm.color}15, ${realm.color}08)`,
+                      backgroundColor: realm.bgColor,
+                      borderColor: realm.lineColor,
                     }}
                   >
                     <CardContent className="p-8 flex flex-col justify-start h-full space-y-4">
                       <div className="flex-shrink-0">
-                        <IconComponent size={56} color={realm.color} weight="bold" />
+                        <IconComponent
+                          size={56}
+                          weight="bold"
+                          style={{ color: realm.lineColor }}
+                        />
                       </div>
-                      <h3
-                        className="font-bold text-xl leading-tight flex-shrink-0"
-                        style={{ color: realm.color }}
-                      >
+                      <h3 className="font-bold text-xl leading-tight flex-shrink-0 text-[var(--color-text-primary)]">
                         {realm.name}
                       </h3>
-                      <p className="text-base text-gray-600 leading-relaxed flex-grow">
+                      <p className="text-base text-[var(--color-text-secondary)] leading-relaxed flex-grow">
                         {realm.description}
                       </p>
                     </CardContent>

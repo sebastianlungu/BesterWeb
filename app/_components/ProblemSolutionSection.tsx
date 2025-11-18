@@ -9,7 +9,7 @@ import { Frown, Wind, AlertCircle, Bot, Users, Settings } from 'lucide-react';
 
 export default function ProblemSolutionSection() {
   return (
-    <Section variant="secondary">
+    <Section variant="mint-subtle">
       <Container size="default">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center px-4">
           {/* Problem Card */}
@@ -21,7 +21,7 @@ export default function ProblemSolutionSection() {
           >
             <Card className="h-full shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] border-2">
               <CardHeader className="pb-4">
-                <Badge variant="destructive" className="w-fit mb-4 px-4 py-1 text-sm font-semibold">
+                <Badge className="w-fit mb-4 px-4 py-1 text-sm font-semibold bg-[var(--color-accent-100)] text-[var(--color-accent-700)] hover:bg-[var(--color-accent-200)]">
                   The Problem
                 </Badge>
                 <CardTitle className="text-3xl md:text-4xl leading-tight text-gray-900">

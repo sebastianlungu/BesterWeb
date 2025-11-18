@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
-  variant?: "default" | "secondary" | "gradient";
+  variant?: "cream-subtle" | "cream-strong" | "mint-subtle" | "mint-strong" | "gradient";
   padding?: "default" | "large" | "small";
   id?: string;
 }
@@ -11,15 +11,17 @@ interface SectionProps {
 export const Section = ({
   children,
   className,
-  variant = "default",
+  variant = "cream-strong",
   padding = "default",
   id,
 }: SectionProps) => {
   const variantClasses = {
-    default: "bg-[var(--color-bg-primary)]",
-    secondary: "bg-[var(--color-bg-secondary)]",
+    "cream-subtle": "bg-bg-cream-subtle",
+    "cream-strong": "bg-bg-cream-strong",
+    "mint-subtle": "bg-bg-mint-subtle",
+    "mint-strong": "bg-bg-mint-strong",
     gradient:
-      "bg-gradient-to-br from-[var(--color-brand-primary)]/10 via-[var(--color-brand-secondary)]/10 to-[var(--color-brand-accent)]/10",
+      "bg-gradient-to-br from-[var(--color-primary-600)]/10 via-[var(--color-secondary-500)]/10 to-[var(--color-secondary-300)]/10",
   };
 
   const paddingClasses = {
