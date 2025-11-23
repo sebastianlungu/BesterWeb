@@ -11,9 +11,7 @@ interface HeroRealmVideoProps {
 const realmVideos: Record<string, string> = {
   'social-feed': '/videos/social-feed.mp4',
   'ai-routine': '/videos/ai-routine.mp4',
-  'quests-realms': '/videos/quests-realms.mp4',
-  'mind-forge': '/videos/mind-forge.mp4',
-  'vital-body': '/videos/vital-body.mp4',
+  'iteration-fun': '/videos/iteration-fun.mp4',
 };
 
 export function HeroRealmVideo({ realm }: HeroRealmVideoProps) {

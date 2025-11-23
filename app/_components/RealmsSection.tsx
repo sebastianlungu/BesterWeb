@@ -80,16 +80,16 @@ export default function RealmsSection() {
           </p>
         </div>
 
-        <div className="w-full overflow-x-auto px-4 py-8 scrollbar-hide">
+        <div className="w-full overflow-x-auto px-4 py-6 scrollbar-hide">
           {/* Single row horizontal layout */}
-          <div className="flex gap-4 justify-center min-w-min mx-auto w-fit">
+          <div className="flex gap-4 justify-center min-w-min mx-auto w-fit py-4">
             {realms.map((realm, index) => {
               const IconComponent = realm.icon;
               return (
                 <motion.div
                   key={index}
                   className="flex-shrink-0"
-                  whileHover={{ y: -8, scale: 1.05 }}
+                  whileHover={{ y: -6, scale: 1.03 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <Card

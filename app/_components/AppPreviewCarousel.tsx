@@ -7,37 +7,23 @@ export const realms = [
   {
     id: 'social-feed',
     name: 'Social Feed',
-    description: 'See what your community is working on',
+    description: 'See what your community is working on, share your wins, and celebrate progress together.',
     color: 'var(--color-brand-primary)',
     emoji: '🌟',
   },
   {
     id: 'ai-routine',
     name: 'Smart AI Routine Engine',
-    description: 'Personalized routines that adapt to you',
+    description: 'Personalized routines that adapt to you. AI learns your patterns and helps you build better habits.',
     color: 'var(--color-realm-system-sanctum)',
     emoji: '🤖',
   },
   {
-    id: 'quests-realms',
-    name: 'Quests & Realms',
-    description: 'Explore different growth universes',
-    color: 'var(--color-realm-creative-flow)',
+    id: 'iteration-fun',
+    name: 'Iteration & Fun Trying',
+    description: 'Playful experimentation, no guilt, just growth. Try new things, learn what works, iterate.',
+    color: 'var(--color-brand-accent)',
     emoji: '🎯',
-  },
-  {
-    id: 'mind-forge',
-    name: 'Mind Forge',
-    description: 'Mental clarity, focus, learning',
-    color: 'var(--color-realm-mind-forge)',
-    emoji: '🧠',
-  },
-  {
-    id: 'vital-body',
-    name: 'Vital Body',
-    description: 'Physical health, fitness, movement',
-    color: 'var(--color-realm-vital-body)',
-    emoji: '💪',
   },
 ];
 
