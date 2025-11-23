@@ -138,12 +138,8 @@ const config: Config = {
         '2xl': 'var(--radius-2xl)',
       },
       fontFamily: {
-        // Primary UI font (Satoshi)
-        sans: ['var(--font-satoshi)', 'var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-        // Secondary body font (Inter)
-        body: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-        // Display font (Cabinet Grotesk)
-        display: ['var(--font-cabinet)', 'var(--font-satoshi)', 'Inter', 'system-ui', 'sans-serif'],
+        // Primary font (Inter)
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
         // Monospace
         mono: ['SF Mono', 'Monaco', 'Consolas', 'monospace'],
       },

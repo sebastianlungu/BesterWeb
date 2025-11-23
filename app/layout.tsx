@@ -1,30 +1,15 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-// import localFont from 'next/font/local'; // TODO: Uncomment when Satoshi + Cabinet Grotesk font files are added
 import './globals.css';
 import Navbar from './_components/Navbar';
 import Footer from './_components/Footer';
 
-// Inter - Secondary/body font (Google Fonts)
+// Inter - Primary font for all text
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
 });
-
-// Satoshi - Primary UI font (local, fallback to Inter)
-// NOTE: Font file not yet added. When available, place at public/fonts/Satoshi-Variable.woff2
-// Until then, Inter will be used as the primary font via CSS fallback
-const satoshi = {
-  variable: '--font-satoshi',
-};
-
-// Cabinet Grotesk - Display font (local, fallback to Satoshi/Inter)
-// NOTE: Font file not yet added. When available, place at public/fonts/CabinetGrotesk-Variable.woff2
-// Until then, Inter will be used as the display font via CSS fallback
-const cabinetGrotesk = {
-  variable: '--font-cabinet',
-};
 
 export const metadata: Metadata = {
   // TODO: Update metadataBase when deploying to production (e.g., 'https://bester.com')
@@ -52,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${satoshi.variable} ${cabinetGrotesk.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="antialiased font-sans">
         <Navbar />
         <main>{children}</main>

@@ -80,37 +80,37 @@ export default function RealmsSection() {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full px-4">
-          {/* Flexbox layout with centered rows */}
-          <div className="flex flex-wrap justify-center gap-6">
+        <div className="w-full overflow-x-auto px-4 py-8 scrollbar-hide">
+          {/* Single row horizontal layout */}
+          <div className="flex gap-4 justify-center min-w-min mx-auto w-fit">
             {realms.map((realm, index) => {
               const IconComponent = realm.icon;
               return (
                 <motion.div
                   key={index}
-                  className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[280px] xl:w-[300px]"
-                  whileHover={{ y: -6, scale: 1.02 }}
+                  className="flex-shrink-0"
+                  whileHover={{ y: -8, scale: 1.05 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <Card
-                    className="h-full min-h-[220px] border-2 cursor-pointer rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+                    className="h-[140px] w-[160px] border-2 cursor-pointer rounded-[32px] shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
                     style={{
                       backgroundColor: realm.bgColor,
                       borderColor: realm.lineColor,
                     }}
                   >
-                    <CardContent className="p-8 flex flex-col justify-start h-full space-y-4">
+                    <CardContent className="p-5 flex flex-col items-center justify-center h-full space-y-2 text-center">
                       <div className="flex-shrink-0">
                         <IconComponent
-                          size={56}
+                          size={40}
                           weight="bold"
                           style={{ color: realm.lineColor }}
                         />
                       </div>
-                      <h3 className="font-bold text-xl leading-tight flex-shrink-0 text-[var(--color-text-primary)]">
+                      <h3 className="font-bold text-sm leading-tight flex-shrink-0 text-[var(--color-text-primary)]">
                         {realm.name}
                       </h3>
-                      <p className="text-base text-[var(--color-text-secondary)] leading-relaxed flex-grow">
+                      <p className="text-xs text-[var(--color-text-secondary)] leading-snug">
                         {realm.description}
                       </p>
                     </CardContent>
